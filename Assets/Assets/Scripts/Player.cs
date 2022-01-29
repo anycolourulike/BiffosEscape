@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -7,9 +7,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] GameObject Biffo;  
-    
-    
+    [SerializeField] GameObject Biffo;      
     [SerializeField] ParticleSystem PlayerDeath;
     [SerializeField] ParticleSystem PlayerCompleteLevel;
     [SerializeField] UnityEvent onDeath;
@@ -82,6 +80,18 @@ public class Player : MonoBehaviour
         text.SetText("+30 EXTRA SECONDS");
         yield return new WaitForSeconds(7f);
         text.enabled = false;
+    }
+
+     public IEnumerator DoorOpened50()
+    {
+        text.enabled = true;
+        text.SetText("Door Open");
+        yield return new WaitForSeconds(45f);
+        
+        PUAnim.Play("PUAnim");
+        yield return new WaitForSeconds(5f);
+        PUAnim.Stop("PUAnim");
+        text.enabled = false;        
     }
 
     public void PlayerCrash()

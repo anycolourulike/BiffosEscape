@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class FadeMenuImage : MonoBehaviour
 {
     // the image you want to fade, assign in inspector
-    [SerializeField] Text img;
+    [SerializeField] TextMeshProUGUI img;
     [SerializeField] UnityEvent ambient;
 
     private void Start()

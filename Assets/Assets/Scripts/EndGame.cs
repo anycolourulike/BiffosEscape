@@ -14,8 +14,8 @@ public class EndGame : MonoBehaviour
             Player.GetComponent<BiffoMover>().enabled = false;
 
             DialogUI.Instance
-             .SetTitle("Game Complete")
-             .SetMessage("You are most amazing!")
+             .SetTitle("Most")
+             .SetMessage("amazing!")
              .OnClose(LevelManager.loadMenu)
              .Show();
         }

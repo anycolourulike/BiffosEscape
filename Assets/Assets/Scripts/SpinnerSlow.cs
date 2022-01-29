@@ -8,7 +8,7 @@ public class SpinnerSlow : MonoBehaviour
      float yAngle = 0.7f;
      float zAngle = 0;
 
-    void Update()
+    void FixedUpdate()
     {
         transform.Rotate(xAngle, yAngle, zAngle * Time.deltaTime);
     }

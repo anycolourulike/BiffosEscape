@@ -31,7 +31,7 @@ public class Timer : MonoBehaviour
     }
 
     public void GamePaused()
-    {
+    {        
         Time.timeScale = 0;       
         timerIsRunning = false;        
     }

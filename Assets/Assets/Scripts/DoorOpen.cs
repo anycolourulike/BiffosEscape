@@ -7,14 +7,15 @@ using UnityEngine;
 public class DoorOpen : MonoBehaviour
 {
     [SerializeField] float doorOpenTime = 30f;
+    //[SerializeField] Player player;
     public float currentTime;
     bool doorIsOpen = false;
-    Animator anim;
+    Animator anim;    
 
     private void Start()
     {
         currentTime = doorOpenTime;
-        anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();        
     }
     private void Update()
     {
@@ -35,6 +36,7 @@ public class DoorOpen : MonoBehaviour
         if( doorIsOpen != true)
         {            
             anim.SetTrigger("DoorOpen");
+            //player.StartCoroutine("DoorOpened50");
             doorIsOpen = true;            
         }  
     }
